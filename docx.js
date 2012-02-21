@@ -83,6 +83,7 @@ var DOCXjs = function() {
 		
 		var files = [
 			'[Content_Types].xml',
+			'_rels/.rels',
 			'docProps/app.xml',
 			'docProps/core.xml',
 			'word/_rels/document.xml.rels',
@@ -107,8 +108,7 @@ var DOCXjs = function() {
 		var file_count = files.length;
 		var file_count_current = 0;
 		var zip = new JSZip("STORE");
-		zip.folder('_rels');
-		
+				
 		for(var file in files) {
 			$.ajax({
 				url: 'blank/' + files[file],
