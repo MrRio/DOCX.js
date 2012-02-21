@@ -35,37 +35,17 @@
 	<h1>DOCX.js Test Page</h1>
 	<p>This is the DOCX.js test page.</p>
 	
-	<textarea id="debug" style="width: 100%; height: 600px"></textarea>
 	<script>
+	
 	function test() {
 		var doc = new DOCXjs();
 		doc.text('DOCX.js is a free open source library for generating Microsoft Word Documents using pure client-side JavaScript.');
 		doc.text('It was developed by James Hall at Snapshot Media.');
 		
-		
-		var output = doc.output();
-		var textarea = document.getElementById('debug');
-		var text = '';
-		for (var file in output) {
-			text += file + ':' + "\n\n";
-			text += output[file];
-			text += "\n\n---\n\n";
-		}
-		
-		textarea.value = text;
-		
-	}
-	
-	function download() {
-		var doc = new DOCXjs();
-		doc.text('DOCX.js is a free open source library for generating Microsoft Word Documents using pure client-side JavaScript.');
-		//doc.text('It was developed by James Hall at Snapshot Media.');
-		
-		
 		var output = doc.output('datauri');
 		
 	}
 	</script>
-	<p><a href="javascript:test()">Run Test</a> <a href="javascript:download()">Run Download</a></p>
+	<p><a href="javascript:test()">Run Test</a></p>
 </body>
 </html>

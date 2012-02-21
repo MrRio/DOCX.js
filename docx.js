@@ -49,16 +49,19 @@ var DOCXjs = function() {
 		
 		// Paragraphs
 		
-		output += '<w:p w:rsidR="001A6335" w:rsidRDefault="00EA68DC" w:rsidP="00EA68DC">';
-		output += '<w:r w:rsidRPr="00C703AC">';
-		output += '<w:rPr>';
-		output += '<w:lang w:val="es-ES_tradnl"/>';
-		output += '</w:rPr>';
-		output += '<w:t xml:space="preserve">';
-		output += 'Fusce blandit, augue eu luctus posuere, mi arcu consequat lorem, non volutpat neque enim a mi. Aliquam nonummy justo in purus. Quisque dolor purus, auctor in, varius non, auctor quis, dolor. Mauris vitae elit. Suspendisse dolor ante, imperdiet id, sodales auctor, tempus mollis, nisl. Donec vehicula tincidunt lectus. Donec cursus. Nam tempor pede eu urna. Praesent nec magna at enim ornare posuere. Fusce pharetra dapibus ligula.';
-		output += '</w:t>';
-		output += '</w:r>';
-		output += '</w:p>';
+		for (var textElement in textElements) {
+			output += '<w:p w:rsidR="001A6335" w:rsidRDefault="00EA68DC" w:rsidP="00EA68DC">';
+			output += '<w:r w:rsidRPr="00C703AC">';
+			output += '<w:rPr>';
+			output += '<w:lang w:val="es-ES_tradnl"/>';
+			output += '</w:rPr>';
+			output += '<w:t xml:space="preserve">';
+			output += textElements[textElement];
+			output += '</w:t>';
+			output += '</w:r>';
+			output += '</w:p>';
+			
+		}
 		
 		
 		

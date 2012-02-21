@@ -1,0 +1,13 @@
+DOCX.js is a document generator for Microsoft Word documents in Pure client-side JavaScript.
+
+Usage:
+
+  var doc = new DOCXjs();
+  doc.text('DOCX.js is a free open source library for generating Microsoft Word Documents using pure client-side JavaScript.');
+  doc.text('It was developed by James Hall at Snapshot Media.');
+
+  var output = doc.output('datauri');
+
+Output:
+
+Nice shiny Microsoft Office Word Document.
