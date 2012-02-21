@@ -53,7 +53,7 @@ var DOCXjs = function() {
 			output += '<w:p w:rsidR="001A6335" w:rsidRDefault="00EA68DC" w:rsidP="00EA68DC">';
 			output += '<w:r w:rsidRPr="00C703AC">';
 			output += '<w:rPr>';
-			output += '<w:lang w:val="es-ES_tradnl"/>';
+			output += '<w:lang w:val="en-GB_tradnl"/>';
 			output += '</w:rPr>';
 			output += '<w:t xml:space="preserve">';
 			output += textElements[textElement];
