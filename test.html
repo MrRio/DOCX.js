@@ -22,6 +22,8 @@
 		}
 	</style>
 	<!-- Include dependencies -->
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./libs/base64.js"></script>
 	<script type="text/javascript" src="./libs/jszip/jszip.js"></script>
 	
@@ -53,7 +55,17 @@
 		textarea.value = text;
 		
 	}
+	
+	function download() {
+		var doc = new DOCXjs();
+		doc.text('DOCX.js is a free open source library for generating Microsoft Word Documents using pure client-side JavaScript.');
+		//doc.text('It was developed by James Hall at Snapshot Media.');
+		
+		
+		var output = doc.output('datauri');
+		
+	}
 	</script>
-	<p><a href="javascript:test()">Run Test</a></p>
+	<p><a href="javascript:test()">Run Test</a> <a href="javascript:download()">Run Download</a></p>
 </body>
 </html>
